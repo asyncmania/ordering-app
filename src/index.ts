@@ -1,14 +1,14 @@
 import { LocalDataSource } from "./data/localDataSource";
 import { HtmlDisplay } from './htmlDisplay';
+import { RemoteData } from './remoteData';
 
 
-const ds = new LocalDataSource();
+const ds = new RemoteData()
 
 async function displayData(): Promise<HTMLElement> {
   const display = new HtmlDisplay()
   display.props = {
-    products: await ds.getProducts("name"),
-    order: ds.order,
+    dataSource: ds
   };
 
   return display.getContent();
