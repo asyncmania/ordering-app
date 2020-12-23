@@ -2,7 +2,9 @@ import { createElement } from "./tools/jsxFactory";
 import { Order, Product } from "./data/entities";
 import { AbstractDataSource } from "./data/abstractDataSource";
 import { ProductList } from "./productList";
+
 export class HtmlDisplay {
+  
   private containerElem: HTMLElement;
   private selectedCategory: string;
 
